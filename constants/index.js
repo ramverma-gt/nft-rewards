@@ -20,7 +20,7 @@ const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const rpcUrls = {
   1: "https://dark-skilled-log.quiknode.pro/6b7af27a62c51a0d3521d798564cec476b938085/",
-  56: "https://cold-snowy-vineyard.bsc.quiknode.pro/2a23de38a3e571f5c28752efb5c0337377044a29/",
+  56: "https://rpc.ankr.com/bsc",
   137: "https://orbital-dimensional-scion.matic.quiknode.pro/c966b74eb84428ed89c7ff564cfdb33c80116dc9/",
 };
 

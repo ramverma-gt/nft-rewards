@@ -60,12 +60,6 @@ const getV2Rewards = (options) => {
       let priorATvl =
         priorCheckpointTVLs[k] === 0 ? tStaking : priorCheckpointTVLs[k];
 
-      console.log(
-        "priorATvl",
-        priorATvl,
-        divide(multiply(stakedAmount, eligibleBlocks), totalStakeLimit),
-        divide(multiply(stakedAmount, eligibleBlocks), priorATvl)
-      );
       // if (deriveBothAPY) {
       //   rValues.push(
       //     divide(multiply(stakedAmount, eligibleBlocks), totalStakeLimit)
