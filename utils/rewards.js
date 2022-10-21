@@ -34,6 +34,8 @@ const getV2Rewards = (options) => {
   // when its premature we need to fetch both rewards
   // when its after staking we need to fetch only single way either a staking will boosted or not
 
+  let prior;
+
   // calculate aggregated reward value
   if (currentCheckpoint !== startCheckpoint) {
     while (k < currentCheckpoint) {
@@ -57,8 +59,9 @@ const getV2Rewards = (options) => {
       // check if using both
       let tStaking = totalStaking === 0 ? stakedAmount : totalStaking;
       // let tStaking = totalStaking;
-      let priorATvl =
-        priorCheckpointTVLs[k] === 0 ? tStaking : priorCheckpointTVLs[k];
+      prior = priorCheckpointTVLs[k] === 0 ? prior : priorCheckpointTVLs[k];
+
+      let priorATvl = prior === 0 ? tStaking : prior;
 
       // if (deriveBothAPY) {
       //   rValues.push(
