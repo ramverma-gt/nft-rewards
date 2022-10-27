@@ -19,9 +19,9 @@ const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 // const polygonRpcUrl = process.env.REACT_APP_POLYGON_RPC_URL;
 
 const rpcUrls = {
-  1: "https://dark-skilled-log.quiknode.pro/6b7af27a62c51a0d3521d798564cec476b938085/",
+  1: "https://rpc.ankr.com/eth",
   56: "https://rpc.ankr.com/bsc",
-  137: "https://orbital-dimensional-scion.matic.quiknode.pro/c966b74eb84428ed89c7ff564cfdb33c80116dc9/",
+  137: "https://rpc.ankr.com/polygon",
 };
 
 const multicallAddress = {
