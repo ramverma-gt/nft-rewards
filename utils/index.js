@@ -89,8 +89,8 @@ const computeStakingConfirmedRewards = (
 
   // start check point
   let startCheckpoint = getStartCheckpoint(
-    stake?.startBlock,
     cohort?.startBlock,
+    stake?.startBlock,
     cohort?.epochBlocks
   );
 
@@ -106,6 +106,8 @@ const computeStakingConfirmedRewards = (
     stake?.stakedAmount,
     parseInt(token?.decimals)
   );
+
+  console.log("stakedAmount", stakedAmount);
 
   // deriving stable rewards
   let stableRewards = getV2Rewards({

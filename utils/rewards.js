@@ -45,16 +45,11 @@ const getV2Rewards = (options) => {
         epochBlocks
       );
 
-      console.log(
-        "userStakedBlock",
-        userStakedBlock,
-        "nextCheckpointBlocks",
-        nextCheckpointBlocks
-      );
-
-      if (userStakedBlock > startCheckpoint * epochBlocks) {
+      if (userStakedBlock > k * epochBlocks) {
         eligibleBlocks = subtract(nextCheckpointBlocks, userStakedBlock);
       }
+
+      console.log({ userStakedBlock, startCheckpoint, epochBlocks });
 
       // check if using both
       let tStaking = totalStaking === 0 ? stakedAmount : totalStaking;
@@ -62,6 +57,8 @@ const getV2Rewards = (options) => {
       prior = priorCheckpointTVLs[k] === 0 ? prior : priorCheckpointTVLs[k];
 
       let priorATvl = prior === 0 ? tStaking : prior;
+
+      console.log({ prior, priorATvl, eligibleBlocks });
 
       // if (deriveBothAPY) {
       //   rValues.push(
